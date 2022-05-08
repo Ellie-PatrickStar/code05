@@ -4,34 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@mipmap/bacground"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginTop="48dp">
+        <ImageView
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:src="@mipmap/img6"
+            android:layout_centerInParent="true"/>
     </RelativeLayout >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp">
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_person_outline_24"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:hint="Email/Account"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:maxLines="1"/>
     </RelativeLayout >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_baseline_looks_24"/>
+
+        <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_alignParentBottom="true"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:maxLines="1"/>
+
+        <Imageview
+        android:id="@+id/iv_pwd_switch"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_baseline_visibility_off_24"/>
+
+    </RelativeLayout >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="32dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:background="?attr/colorPrimary"
+            android:layout_marginTop="32dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout >
+
+
+
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="wrap_content">
     </RelativeLayout >
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </LinearLayout>
