@@ -10,13 +10,13 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
-    private Boolean bPwdswitch = false;
+    private Boolean bPwdSwitch = false;
     private EditText etPwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final ImageView ivPwdSwitch = findViewById(R.id.iv_pwd_switch);
+        final ImageView ivPwdSwitch = findViewById(R.id.ivPwdSwitch);
         etPwd = findViewById(R.id.et_pwd);
         ivPwdSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
                     etPwd.setInputType(
                             InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
                 } else {
-                    ivPwdswitch.setImageResource(R.drawable.ic_baseline_visibility_off_24);
+                    ivPwdSwitch.setImageResource(R.drawable.ic_baseline_visibility_off_24);
                     etPwd.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_CLASS_TEXT);
                     etPwd.setTypeface(Typeface.DEFAULT);
                 }
