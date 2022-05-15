@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">code05</string>
+
+    <string name="shared_preferences_file_name">sp_login keywordstyle
+    </string >
+    <string name="login_account_name">login_account_name keywordstyle
+    </string >
+    <string name="login_password">login_password
+    </string >
+    <string name="login_remember_password">login_remember_password keywordstyle
+    </string >
+
 </resources>

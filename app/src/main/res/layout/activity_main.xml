@@ -17,7 +17,7 @@
             android:layout_width="108dp"
             android:layout_height="108dp"
             android:layout_centerInParent="true"
-            android:src="@mipmap/img1" />
+            android:src="@mipmap/ic_logo" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -36,13 +36,14 @@
             android:src="@drawable/ic_baseline_person_outline_24" />
 
         <EditText
+            android:id="@+id/et_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
             android:layout_marginStart="48dp"
             android:layout_marginEnd="48dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="-5dp"
             android:hint="Email/Account"
             android:inputType="text"
             android:maxLines="1"
@@ -51,7 +52,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_margin="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp">
 
@@ -90,11 +92,44 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="1dp">
+
+        <CheckBox
+            android:id="@+id/cb_remember_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="Remember Password"
+            android:textColor="?attr/colorAccent" />
+
+        <TextView
+            android:id="@+id/tv_sign_up"
+            android:text="Sign up"
+            android:textColor="?attr/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/cb_remember_pwd"
+            android:layout_marginEnd="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:layout_weight="1">
 
         <Button
+            android:id="@+id/bt_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
