@@ -1,153 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/bacground"
-    android:orientation="vertical"
     tools:context=".LoginActivity">
 
-    <RelativeLayout
+
+    <TextView
+        android:id="@+id/bg"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@color/cardview_dark_background"
+
+        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteY="-97dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_weight="1">
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="81dp"
+        android:src="@mipmap/ic_logo"
+        app:layout_constraintBottom_toTopOf="@+id/et_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:layout_width="108dp"
-            android:layout_height="108dp"
-            android:layout_centerInParent="true"
-            android:src="@mipmap/ic_logo" />
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="48dp">
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_baseline_person_outline_24"
+        app:layout_constraintBottom_toBottomOf="@+id/et_account"
+        app:layout_constraintEnd_toStartOf="@+id/et_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_account" />
+
+    <EditText
+        android:id="@+id/et_account"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Email/Account"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/et_pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
 
 
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="4dp"
-            android:src="@drawable/ic_baseline_person_outline_24" />
-
-        <EditText
-            android:id="@+id/et_account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="center"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="-5dp"
-            android:hint="Email/Account"
-            android:inputType="text"
-            android:maxLines="1"
-            android:textColor="@android:color/white" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="4dp"
-            android:src="@drawable/ic_baseline_looks_24" />
-
-        <EditText
-            android:id="@+id/et_pwd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="48dp"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="4dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:maxLines="1"
-            android:textColor="@android:color/white" />
-
-        <ImageView
-            android:id="@+id/ivPwdSwitch"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-
-            android:layout_margin="8dp"
-
-            android:src="@drawable/ic_baseline_visibility_off_24" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="1dp">
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_baseline_looks_24"
 
-        <CheckBox
-            android:id="@+id/cb_remember_pwd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="4dp"
-            android:text="Remember Password"
-            android:textColor="?attr/colorAccent" />
-
-        <TextView
-            android:id="@+id/tv_sign_up"
-            android:text="Sign up"
-            android:textColor="?attr/colorAccent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@id/cb_remember_pwd"
-            android:layout_marginEnd="8dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"/>
-    </RelativeLayout >
+        app:layout_constraintBottom_toTopOf="@+id/cb_remember_pwd"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/et_pwd"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_weight="1">
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="@android:color/white"
+        app:layout_constrain="@+id/cb_remember_pwd"
 
-        <Button
-            android:id="@+id/bt_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_account"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_account"
+        tools:layout_editor_absoluteY="329dp"
+        tools:ignore="MissingConstraints" />
 
-            android:background="@android:color/white"
-            android:text="Login"
-            android:textColor="@android:color/black" />
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/ivPwdSwitch"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
 
-    </RelativeLayout>
+        android:src="@drawable/ic_baseline_visibility_off_24"
+        app:layout_constraintBottom_toBottomOf="@+id/et_pwd"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd"
+        app:layout_constraintTop_toTopOf="@+id/et_pwd" />
 
-</LinearLayout>
+    <CheckBox
+        android:id="@+id/cb_remember_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember Password"
+        android:textColor="?attr/colorAccent"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd" />
+
+
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Sign up"
+        android:textColor="?attr/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_remember_pwd"
+        app:layout_constraintEnd_toEndOf="@+id/ivPwdSwitch"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cb_remember_pwd"
+        app:layout_constraintTop_toTopOf="@+id/cb_remember_pwd"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="163dp"
+        android:background="@android:color/white"
+        android:text="Login"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivPwdSwitch"
+        app:layout_constraintStart_toStartOf="@+id/imageView3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
