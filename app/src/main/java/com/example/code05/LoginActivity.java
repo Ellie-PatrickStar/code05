@@ -32,6 +32,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         etAccount = findViewById(R.id.et_account);
         cbRememberPwd = findViewById(R.id.cb_remember_pwd);
         Button btLogin = findViewById(R.id.bt_login);
+
+        String spFileName = getResources().getString(R.string.shared_preferences_file_name);
+        String accountKey = getResources().getString(R.string.login_account_name);
+        String passwordKey = getResources().getString(R.string.login_password);
+        String rememberPasswordKey = getResources().getString(R.string.login_remember_password);
+
+
+        SharedPreferences spFile = getSharedPreferences(spFileName , MODE_PRIVATE);
+        String account = spFile.getString(accountKey , null);
+        String password = spFile.getString(passwordKey , null);
+        Boolean rememberPassword = spFile.getBoolean(rememberPasswordKey , false);
+
+        if (account != null && !TextUtils.isEmpty(account)) {
+            etAccount.setText(account);
+        }
+
+        if(password != null && !TextUtils.isEmpty(password)) {
+            etPwd.setText(password);
+            }
+        cbRememberPwd.setChecked(rememberPassword);
+
 //        点击button保存
         btLogin.setOnClickListener(this);
 
